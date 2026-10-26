@@ -1,0 +1,3 @@
+interface:
+  display_name: "Revisor Pedagógico"
+  short_description: "Valida alineación entre objetivo, contenido, práctica, evaluación y carga cognitiva."

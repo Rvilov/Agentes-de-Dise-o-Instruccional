@@ -1,0 +1,409 @@
+{
+  "source": "Content - Revisión QA x DI.pptx",
+  "source_sha256": "ec8dc8025e76e2232951a099ad32e5a73890a5687ba8fbefd497c41271ddebe5",
+  "source_slides": 97,
+  "scope": "Redacción/DI/formato/evaluación/sincronía visual; NO fuente factual del cliente.",
+  "authority": "PPTX original > extracción textual/index > control operativo resumido. Precedencia externa: instrucciones expresas del cliente > Ficha Maestra > guía interna > español estándar.",
+  "note": "Las actividades y ejemplos se indexan por completo; no se convierten automáticamente en reglas.",
+  "semicolon_scope": {
+    "present_in_source": true,
+    "source_slides": [
+      26
+    ],
+    "independent_uses_defined_in_source": false,
+    "action": "No atribuir a la PPT usos generales del punto y coma. Consultar suplemento de español estándar, etiquetado como externo a PPT."
+  },
+  "controls": [
+    {
+      "id": "CQ-01",
+      "source_slides": [
+        4
+      ],
+      "agents": [
+        "resource-producer",
+        "template-format-reviewer",
+        "course-consistency-reviewer",
+        "final-qa"
+      ],
+      "check": "Mantener uniformidad del formato de guiones y continuidad entre diseñadores y módulos.",
+      "gate": "revisión de criterio",
+      "origin": "PPT original"
+    },
+    {
+      "id": "CQ-02",
+      "source_slides": [
+        5
+      ],
+      "agents": [
+        "resource-producer",
+        "template-format-reviewer",
+        "dynamism-reviewer",
+        "final-qa"
+      ],
+      "check": "Indicar desde guion qué material es botón, lista, esquema u otro bloque y su jerarquía.",
+      "gate": "revisión de criterio",
+      "origin": "PPT original"
+    },
+    {
+      "id": "CQ-03",
+      "source_slides": [
+        7
+      ],
+      "agents": [
+        "resource-producer",
+        "language-humanizer",
+        "final-qa"
+      ],
+      "check": "Eliminar puntos suspensivos sin función gramatical, exceso de puntos enfáticos y ausencia de conectores.",
+      "gate": "revisión de criterio",
+      "origin": "PPT original"
+    },
+    {
+      "id": "CQ-04",
+      "source_slides": [
+        9
+      ],
+      "agents": [
+        "resource-producer",
+        "pedagogical-reviewer",
+        "final-qa"
+      ],
+      "check": "Equilibrar longitud y estructura de respuestas; distractores plausibles, sin efecto espejo.",
+      "gate": "revisión de criterio",
+      "origin": "PPT original"
+    },
+    {
+      "id": "CQ-05",
+      "source_slides": [
+        17
+      ],
+      "agents": [
+        "resource-producer",
+        "visual-stock-reviewer",
+        "dynamism-reviewer",
+        "final-qa"
+      ],
+      "check": "Alinear cada recurso visual con el concepto técnico citado en audio; no usar stock genérico.",
+      "gate": "revisión de criterio",
+      "origin": "PPT original"
+    },
+    {
+      "id": "CQ-06",
+      "source_slides": [
+        18,
+        19,
+        20
+      ],
+      "agents": [
+        "resource-producer",
+        "language-humanizer",
+        "course-consistency-reviewer",
+        "final-qa"
+      ],
+      "check": "Revisar integridad gramatical, puntuación, mayúsculas y palabras huérfanas entre escenas/pantallas.",
+      "gate": "revisión de criterio",
+      "origin": "PPT original"
+    },
+    {
+      "id": "CQ-07",
+      "source_slides": [
+        25,
+        26
+      ],
+      "agents": [
+        "language-humanizer",
+        "final-qa"
+      ],
+      "check": "Situar punto final tras las comillas de cierre cuando termine allí la oración; ejemplos e interrogación contextual.",
+      "gate": "revisión de criterio",
+      "origin": "PPT original"
+    },
+    {
+      "id": "CQ-08",
+      "source_slides": [
+        27
+      ],
+      "agents": [
+        "language-humanizer",
+        "final-qa"
+      ],
+      "check": "Conservar el punto abreviativo dentro de comillas y añadir cierre oracional fuera cuando proceda.",
+      "gate": "revisión de criterio",
+      "origin": "PPT original"
+    },
+    {
+      "id": "CQ-09",
+      "source_slides": [
+        28
+      ],
+      "agents": [
+        "language-humanizer",
+        "final-qa"
+      ],
+      "check": "Conservar puntos suspensivos de una cita dentro de las comillas y puntuar fuera cuando proceda.",
+      "gate": "revisión de criterio",
+      "origin": "PPT original"
+    },
+    {
+      "id": "CQ-10",
+      "source_slides": [
+        32,
+        33,
+        34,
+        44,
+        56
+      ],
+      "agents": [
+        "language-humanizer",
+        "resource-producer",
+        "final-qa"
+      ],
+      "check": "Usar dos puntos para enumeraciones precedidas de concepto general; evitarlos si separan verbo/preposición de su complemento.",
+      "gate": "revisión de criterio",
+      "origin": "PPT original"
+    },
+    {
+      "id": "CQ-11",
+      "source_slides": [
+        35,
+        44,
+        56
+      ],
+      "agents": [
+        "language-humanizer",
+        "final-qa"
+      ],
+      "check": "Introducir citas textuales con dos puntos y comillas según el contexto.",
+      "gate": "revisión de criterio",
+      "origin": "PPT original"
+    },
+    {
+      "id": "CQ-12",
+      "source_slides": [
+        45,
+        46,
+        47,
+        48,
+        57,
+        58
+      ],
+      "agents": [
+        "language-humanizer",
+        "resource-producer",
+        "final-qa"
+      ],
+      "check": "Usar dos puntos en conexión causa-efecto, conclusión/resumen y explicación/verificación.",
+      "gate": "revisión de criterio",
+      "origin": "PPT original"
+    },
+    {
+      "id": "CQ-13",
+      "source_slides": [
+        59
+      ],
+      "agents": [
+        "language-humanizer",
+        "final-qa"
+      ],
+      "check": "En saludos epistolares: dos puntos y texto siguiente en nuevo renglón con mayúscula.",
+      "gate": "revisión de criterio",
+      "origin": "PPT original"
+    },
+    {
+      "id": "CQ-14",
+      "source_slides": [
+        60
+      ],
+      "agents": [
+        "language-humanizer",
+        "final-qa"
+      ],
+      "check": "En formatos jurídicos y administrativos aplicar dos puntos y renglón independiente tras verbo de acto.",
+      "gate": "revisión de criterio",
+      "origin": "PPT original"
+    },
+    {
+      "id": "CQ-15",
+      "source_slides": [
+        61
+      ],
+      "agents": [
+        "language-humanizer",
+        "final-qa"
+      ],
+      "check": "Dos puntos entre título general y subtítulo/epígrafe parcial.",
+      "gate": "revisión de criterio",
+      "origin": "PPT original"
+    },
+    {
+      "id": "CQ-16",
+      "source_slides": [
+        69
+      ],
+      "agents": [
+        "language-humanizer",
+        "final-qa"
+      ],
+      "check": "Separar incisos explicativos con comas de apertura y cierre.",
+      "gate": "revisión de criterio",
+      "origin": "PPT original"
+    },
+    {
+      "id": "CQ-17",
+      "source_slides": [
+        71,
+        73
+      ],
+      "agents": [
+        "language-humanizer",
+        "final-qa"
+      ],
+      "check": "Listas completas con conjunción final; listas incompletas con etcétera, puntos suspensivos o cierre.",
+      "gate": "revisión de criterio",
+      "origin": "PPT original"
+    },
+    {
+      "id": "CQ-18",
+      "source_slides": [
+        76
+      ],
+      "agents": [
+        "language-humanizer",
+        "final-qa"
+      ],
+      "check": "Distinguir vocativos y aislarlos con comas según su posición.",
+      "gate": "revisión de criterio",
+      "origin": "PPT original"
+    },
+    {
+      "id": "CQ-19",
+      "source_slides": [
+        78
+      ],
+      "agents": [
+        "language-humanizer",
+        "final-qa"
+      ],
+      "check": "Separar interjecciones mediante coma cuando corresponda.",
+      "gate": "revisión de criterio",
+      "origin": "PPT original"
+    },
+    {
+      "id": "CQ-20",
+      "source_slides": [
+        80,
+        81
+      ],
+      "agents": [
+        "language-humanizer",
+        "resource-producer",
+        "final-qa"
+      ],
+      "check": "Usar coma en conectores discursivos; respetar su función sintáctica.",
+      "gate": "revisión de criterio",
+      "origin": "PPT original"
+    },
+    {
+      "id": "CQ-21",
+      "source_slides": [
+        85
+      ],
+      "agents": [
+        "language-humanizer",
+        "final-qa"
+      ],
+      "check": "Revisar adverbios incidentales y su puntuación en contexto.",
+      "gate": "revisión de criterio",
+      "origin": "PPT original"
+    },
+    {
+      "id": "CQ-22",
+      "source_slides": [
+        86
+      ],
+      "agents": [
+        "language-humanizer",
+        "final-qa"
+      ],
+      "check": "Puntuar elementos incidentales o causales según posición y relación sintáctica.",
+      "gate": "revisión de criterio",
+      "origin": "PPT original"
+    },
+    {
+      "id": "CQ-23",
+      "source_slides": [
+        87,
+        88,
+        89
+      ],
+      "agents": [
+        "language-humanizer",
+        "final-qa"
+      ],
+      "check": "Evaluar coma antes de conjunciones y/e/ni/o/u según estructura; no añadirla automáticamente.",
+      "gate": "revisión de criterio",
+      "origin": "PPT original"
+    },
+    {
+      "id": "CQ-24",
+      "source_slides": [
+        94
+      ],
+      "agents": [
+        "resource-producer",
+        "language-humanizer",
+        "course-consistency-reviewer",
+        "final-qa"
+      ],
+      "check": "No mezclar tú y usted dentro de un recurso/sección sin causa explícita.",
+      "gate": "revisión de criterio",
+      "origin": "PPT original"
+    },
+    {
+      "id": "CQ-25",
+      "source_slides": [
+        95
+      ],
+      "agents": [
+        "resource-producer",
+        "language-humanizer",
+        "course-consistency-reviewer",
+        "final-qa"
+      ],
+      "check": "Evitar usted distante/burocrático con pasivas innecesarias.",
+      "gate": "revisión de criterio",
+      "origin": "PPT original"
+    },
+    {
+      "id": "CQ-26",
+      "source_slides": [
+        96
+      ],
+      "agents": [
+        "resource-producer",
+        "language-humanizer",
+        "course-consistency-reviewer",
+        "final-qa"
+      ],
+      "check": "Evitar tú artificial, modismos juveniles y diminutivos forzados.",
+      "gate": "revisión de criterio",
+      "origin": "PPT original"
+    },
+    {
+      "id": "CQ-27",
+      "source_slides": [
+        97
+      ],
+      "agents": [
+        "course-production-orchestrator",
+        "resource-producer",
+        "language-humanizer",
+        "course-consistency-reviewer",
+        "final-qa"
+      ],
+      "check": "Elegir tú/usted según audiencia, objetivo y voz de marca conforme a la matriz final de la guía.",
+      "gate": "revisión de criterio",
+      "origin": "PPT original"
+    }
+  ]
+}

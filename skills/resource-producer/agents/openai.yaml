@@ -1,0 +1,3 @@
+interface:
+  display_name: "Productor de Recursos"
+  short_description: "Genera cada recurso del curso en Word, trazable a fuentes y listo para QA."

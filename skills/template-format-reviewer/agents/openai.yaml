@@ -1,0 +1,3 @@
+interface:
+  display_name: "Revisor de Plantilla y Formato"
+  short_description: "Valida Word, estructura exacta de la plantilla, campos, enlaces y render final."

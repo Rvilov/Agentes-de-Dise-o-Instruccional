@@ -1,0 +1,40 @@
+{
+  "agent": "source-fidelity-reviewer",
+  "resource_id": "R1",
+  "resource": "R1",
+  "status": "PENDIENTE",
+  "decision": "REGRESA_A_PRODUCCION",
+  "review_complete": false,
+  "word_sha256": "HASH_REAL_DEL_DOCX",
+  "source_hashes": {
+    "F1": "HASH_REAL_DE_FUENTE"
+  },
+  "reviewed_at": "2026-10-26T12:00:00+01:00",
+  "reviewed_unit_ids": [],
+  "reviewed_claim_ids": [],
+  "reviewed_topic_ids": [],
+  "semantic_checks": {
+    "claim_completeness": false,
+    "evidence_support": false,
+    "conditions_retained": false,
+    "source_precedence_reviewed": false,
+    "conflicts_resolved": false,
+    "no_outside_facts": false
+  },
+  "review_notes": "PENDIENTE: comprobar semantica y declarar alcance de revision real, no inferir el resultado por la mera existencia de citas.",
+  "issues": [],
+  "claim_assessments": [
+    {
+      "claim_id": "C1",
+      "verdict": "PENDIENTE",
+      "explanation": "PENDIENTE: comparar la frase con la cita en la fuente"
+    }
+  ],
+  "topic_assessments": [
+    {
+      "topic_id": "T1",
+      "covered": false,
+      "explanation": "PENDIENTE: confirmar cobertura real del tema obligatorio"
+    }
+  ]
+}

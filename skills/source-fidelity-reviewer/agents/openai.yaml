@@ -1,0 +1,3 @@
+interface:
+  display_name: "Revisor de Fidelidad a Fuentes"
+  short_description: "Compara cada recurso con todos los materiales base y bloquea datos no sustentados."

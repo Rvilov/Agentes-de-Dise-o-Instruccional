@@ -1,0 +1,3 @@
+interface:
+  display_name: "Revisor de Accesibilidad"
+  short_description: "Revisa alt text, subtítulos, contraste, claridad e instrucciones accesibles."

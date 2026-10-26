@@ -1,0 +1,6 @@
+{
+  "schema_version": "1.4.1",
+  "topics": [
+    {"id":"T1","source_id":"F1","locator":"slide:3","quote":"Fragmento exacto del material base que expresa el tema obligatorio.","usage":"content","required":true,"resource_ids":["R1"]}
+  ]
+}

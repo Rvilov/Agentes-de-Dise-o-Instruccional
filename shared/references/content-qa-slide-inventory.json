@@ -1,0 +1,871 @@
+{
+  "title": "Content - Revisión QA x DI",
+  "slide_count": 97,
+  "sha256": "ec8dc8025e76e2232951a099ad32e5a73890a5687ba8fbefd497c41271ddebe5",
+  "slides": [
+    {
+      "slide": 1,
+      "kind": "portada / separador",
+      "text_blocks": [
+        "Content - Revisión QA x DI",
+        "02 marzo, 2026"
+      ],
+      "images": 0
+    },
+    {
+      "slide": 2,
+      "kind": "agenda",
+      "text_blocks": [
+        "Orden del día",
+        "Escala\nAspectos de forma\nAspectos de fondo"
+      ],
+      "images": 0
+    },
+    {
+      "slide": 3,
+      "kind": "actividad / ejercicio",
+      "text_blocks": [
+        "Escala"
+      ],
+      "images": 1
+    },
+    {
+      "slide": 4,
+      "kind": "regla / explicación",
+      "text_blocks": [
+        "2. Aspectos de forma",
+        "Uniformidad en los formatos de guiones de diseño instruccional:\nEvita confusiones en la comunicación interna (equipo) y externa (cliente).\nVarios diseñadores instruccionales + módulos de un mismo curso = la transición sea invisible para el usuario final."
+      ],
+      "images": 0
+    },
+    {
+      "slide": 5,
+      "kind": "regla / explicación",
+      "text_blocks": [
+        "2. Aspectos de forma",
+        "Marcar en los guiones lo que puede ser un botón/una lista/un esquema.\nArquitectura del contenido.\n\nBeneficios:\nUsuario: navegar de forma intuitiva.\nEquipo de diseño: no cometer errores de jerarquía."
+      ],
+      "images": 0
+    },
+    {
+      "slide": 6,
+      "kind": "ejemplo (no regla por sí solo)",
+      "text_blocks": [
+        "3. Aspectos de fondo",
+        "\"El aprendizaje es un viaje sin fin hacia el conocimiento... Un camino donde cada paso cuenta para alcanzar la excelencia. Es necesario transformar los procesos. Innovar en cada etapa. Adaptarse al cambio constante... Porque el futuro no espera a nadie. La educación es la llave que abre todas las puertas del éxito... Solo debemos atrevernos a cruzar el umbral del mañana. Con esfuerzo. Con dedicación. Con visión.\""
+      ],
+      "images": 0
+    },
+    {
+      "slide": 7,
+      "kind": "regla / explicación",
+      "text_blocks": [
+        "3. Aspectos de fondo",
+        "Copy-paste IA:\nPuntos suspensivos sin función gramatical: crear \"suspenso\" o reflexión poética que en muchos casos resulta innecesaria.\nExceso de puntos: \"Con esfuerzo. Con dedicación.\" (enfatizar).\nFalta de conectores lógicos: en lugar de usar nexos (\"por lo tanto\", \"sin embargo\", \"debido a\") corta la idea con un punto y empieza otra."
+      ],
+      "images": 0
+    },
+    {
+      "slide": 8,
+      "kind": "ejemplo (no regla por sí solo)",
+      "text_blocks": [
+        "3. Aspectos de fondo",
+        "¿Qué es el Diseño Instruccional?\n\nEs crear cursos para internet.\nEs el proceso sistemático de planificar, diseñar y desarrollar materiales educativos que faciliten la adquisición de conocimientos y habilidades específicas de manera eficiente y eficaz, considerando siempre las necesidades del estudiante y los objetivos de aprendizaje.\nEs una forma de enseñar con diapositivas.\nEs el uso de tecnología en el aula."
+      ],
+      "images": 0
+    },
+    {
+      "slide": 9,
+      "kind": "regla / explicación",
+      "text_blocks": [
+        "3. Aspectos de fondo",
+        "Copy-paste IA:\nDesequilibrio visual: extensión de la respuesta correcta.\n\n¿Cómo ajustar?\nEn el prompt pedir una longitud similar, estructura gramatical idéntica, evitar el “efecto espejo” (distractores que sean errores comunes de la vida real, no solo lo contrario de la verdad)."
+      ],
+      "images": 0
+    },
+    {
+      "slide": 10,
+      "kind": "portada / separador",
+      "text_blocks": [
+        "Content - Revisión QA x DI + ED",
+        "17 marzo, 2026"
+      ],
+      "images": 0
+    },
+    {
+      "slide": 11,
+      "kind": "agenda",
+      "text_blocks": [
+        "Orden del día",
+        "Oráculo de la semana\nSincronía de recursos visuales\nIntegridad gramatical"
+      ],
+      "images": 0
+    },
+    {
+      "slide": 12,
+      "kind": "actividad / ejercicio",
+      "text_blocks": [
+        "Oráculo de la semana"
+      ],
+      "images": 1
+    },
+    {
+      "slide": 13,
+      "kind": "actividad / ejercicio",
+      "text_blocks": [
+        "Oráculo de la semana"
+      ],
+      "images": 1
+    },
+    {
+      "slide": 14,
+      "kind": "actividad / ejercicio",
+      "text_blocks": [
+        "Oráculo de la semana"
+      ],
+      "images": 1
+    },
+    {
+      "slide": 15,
+      "kind": "actividad / ejercicio",
+      "text_blocks": [
+        "Oráculo de la semana"
+      ],
+      "images": 1
+    },
+    {
+      "slide": 16,
+      "kind": "actividad / ejercicio",
+      "text_blocks": [
+        "Oráculo de la semana"
+      ],
+      "images": 1
+    },
+    {
+      "slide": 17,
+      "kind": "regla / explicación",
+      "text_blocks": [
+        "2. Sincronía de recursos visuales",
+        "Asegurar que lo que se muestra en pantalla refuerce el concepto técnico mencionado en el audio, evitando el uso de video genérico que no aporte valor pedagógico."
+      ],
+      "images": 1
+    },
+    {
+      "slide": 18,
+      "kind": "regla / explicación",
+      "text_blocks": [
+        "3. Integridad gramatical",
+        "No siempre procesamos las pantallas como una secuencia fluida."
+      ],
+      "images": 1
+    },
+    {
+      "slide": 19,
+      "kind": "ejemplo (no regla por sí solo)",
+      "text_blocks": [
+        "3. Integridad gramatical",
+        "Escena 1\n\nque el estudiante desarrolle las...",
+        "Escena 2\n\ncompetencias necesarias. Por ello,"
+      ],
+      "images": 0
+    },
+    {
+      "slide": 20,
+      "kind": "regla / explicación",
+      "text_blocks": [
+        "3. Integridad gramatical",
+        "¿El texto que dejé en la pantalla anterior tiene signo de puntuación final?\n¿La nueva pantalla inicia con mayúscula?\nAl leer la pantalla aislada, ¿se entiende o queda una palabra \"huérfana\"?"
+      ],
+      "images": 0
+    },
+    {
+      "slide": 21,
+      "kind": "portada / separador",
+      "text_blocks": [
+        "Content - Revisión QA x DI",
+        "13 abril, 2026"
+      ],
+      "images": 0
+    },
+    {
+      "slide": 22,
+      "kind": "agenda",
+      "text_blocks": [
+        "Orden del día",
+        "Horoscopan\nComillas y punto final"
+      ],
+      "images": 0
+    },
+    {
+      "slide": 23,
+      "kind": "actividad / ejercicio",
+      "text_blocks": [
+        "Horoscopan"
+      ],
+      "images": 1
+    },
+    {
+      "slide": 24,
+      "kind": "actividad / ejercicio",
+      "text_blocks": [
+        "Horoscopan"
+      ],
+      "images": 1
+    },
+    {
+      "slide": 25,
+      "kind": "ejemplo (no regla por sí solo)",
+      "text_blocks": [
+        "2. Comillas y punto final",
+        "¿Cuál es correcto?",
+        "Él dijo: “Mañana volveré”.",
+        "Él dijo: “Mañana volveré.”"
+      ],
+      "images": 0
+    },
+    {
+      "slide": 26,
+      "kind": "regla / explicación",
+      "text_blocks": [
+        "2. Comillas y punto final",
+        "El punto final se coloca siempre después de las comillas de cierre.\nComa\nPunto y coma\nDos puntos"
+      ],
+      "images": 0
+    },
+    {
+      "slide": 27,
+      "kind": "regla / explicación",
+      "text_blocks": [
+        "2. Comillas y punto final",
+        "Abreviaturas\n“Vine de EE. UU.”. \nEl punto de la abreviatura se mantiene y se añade el punto final fuera."
+      ],
+      "images": 0
+    },
+    {
+      "slide": 28,
+      "kind": "regla / explicación",
+      "text_blocks": [
+        "2. Comillas y punto final",
+        "Puntos suspensivos\n“No sé si decirte que…”. Al final decidió callar.\nSi el texto citado termina en puntos suspensivos, estos van dentro de las comillas, y el punto final de la oración sigue yendo fuera."
+      ],
+      "images": 0
+    },
+    {
+      "slide": 29,
+      "kind": "portada / separador",
+      "text_blocks": [
+        "Content - Revisión QA x DI",
+        "25 mayo, 2026"
+      ],
+      "images": 0
+    },
+    {
+      "slide": 30,
+      "kind": "agenda",
+      "text_blocks": [
+        "Orden del día",
+        "Rompecabezas\nUso de los dos puntos"
+      ],
+      "images": 0
+    },
+    {
+      "slide": 31,
+      "kind": "actividad / ejercicio",
+      "text_blocks": [
+        "Rompecabezas",
+        "¿Serás tú el ganador o ganadora?\n¡Comparte tu pantalla cuando lo hayas resuelto!"
+      ],
+      "images": 0
+    },
+    {
+      "slide": 32,
+      "kind": "regla / explicación",
+      "text_blocks": [
+        "2. Uso de los dos puntos",
+        "¿Cuál es su función?\nDetener el discurso para llamar la atención sobre lo que sigue, lo cual siempre debe mantener una relación de dependencia o causa-efecto con el texto precedente."
+      ],
+      "images": 0
+    },
+    {
+      "slide": 33,
+      "kind": "regla / explicación",
+      "text_blocks": [
+        "2. Uso de los dos puntos",
+        "Ejemplos de uso\nEnumeraciones\nAntes de una enumeración si esta cuenta con un concepto general que resume lo que se va a listar.\nEjemplo: \nAyer compré tres libros: uno de historia, una novela y un poemario."
+      ],
+      "images": 0
+    },
+    {
+      "slide": 34,
+      "kind": "regla / explicación",
+      "text_blocks": [
+        "2. Uso de los dos puntos",
+        "No deben colocarse dos puntos si la lista se introduce directamente tras una preposición o un verbo que exige un complemento.\n\u000bMis aficiones son: leer, viajar y pintar. / Mis aficiones son leer, viajar y pintar. \nTengo tres aficiones: leer, viajar y pintar.\nA la inversa:\nNatural, sana y económica: así es la comida que preparamos aquí."
+      ],
+      "images": 0
+    },
+    {
+      "slide": 35,
+      "kind": "regla / explicación",
+      "text_blocks": [
+        "2. Uso de los dos puntos",
+        "Citas textuales\nIntroducen una reproducción literal de palabras ajenas. \nEjemplo: \nEl presidente afirmó: «No daremos un paso atrás».\n\nLa cita debe comenzar obligatoriamente con mayúscula y entre comillas."
+      ],
+      "images": 0
+    },
+    {
+      "slide": 36,
+      "kind": "actividad / ejercicio",
+      "text_blocks": [
+        "2. Uso de los dos puntos",
+        "Ejercicio 1/5\n\nSus apellidos son: Esperanza y Caridad."
+      ],
+      "images": 0
+    },
+    {
+      "slide": 37,
+      "kind": "actividad / ejercicio",
+      "text_blocks": [
+        "2. Uso de los dos puntos",
+        "Ejercicio 2/5\n\nLa directora dijo que: no se iban a tolerar plagios en los proyectos de fin de carrera."
+      ],
+      "images": 0
+    },
+    {
+      "slide": 38,
+      "kind": "actividad / ejercicio",
+      "text_blocks": [
+        "2. Uso de los dos puntos",
+        "Ejercicio 3/5\n\nLas calificaciones posibles son estas cinco:\nSobresaliente\nNotable\nInsuficiente\nSuficiente"
+      ],
+      "images": 0
+    },
+    {
+      "slide": 39,
+      "kind": "actividad / ejercicio",
+      "text_blocks": [
+        "2. Uso de los dos puntos",
+        "Ejercicio 4/5\n\nMi abuela siempre me lo decía: «Las malas compañías: ese es el principio de muchas desdichas»."
+      ],
+      "images": 0
+    },
+    {
+      "slide": 40,
+      "kind": "actividad / ejercicio",
+      "text_blocks": [
+        "2. Uso de los dos puntos",
+        "Ejercicio 5/5\n\nYa tenemos los resultados del sorteo: la selección española comparte grupo con estos países: Brasil, Malta, Gabón y Australia."
+      ],
+      "images": 0
+    },
+    {
+      "slide": 41,
+      "kind": "portada / separador",
+      "text_blocks": [
+        "Content - Revisión QA x DI",
+        "15 junio, 2026"
+      ],
+      "images": 0
+    },
+    {
+      "slide": 42,
+      "kind": "agenda",
+      "text_blocks": [
+        "Orden del día",
+        "En la escala de Maradona\nRecapitulación\nUso de los dos puntos (continuación)"
+      ],
+      "images": 0
+    },
+    {
+      "slide": 43,
+      "kind": "actividad / ejercicio",
+      "text_blocks": [
+        "En la escala de Maradona"
+      ],
+      "images": 1
+    },
+    {
+      "slide": 44,
+      "kind": "repaso (remite a reglas anteriores)",
+      "text_blocks": [
+        "2. Recapitulación",
+        "Enumeración\nAyer compré tres libros: uno de historia, una novela y un poemario.\n\nCitas textuales\nEl presidente afirmó: «No daremos un paso atrás»."
+      ],
+      "images": 0
+    },
+    {
+      "slide": 45,
+      "kind": "regla / explicación",
+      "text_blocks": [
+        "3. Uso de los dos puntos",
+        "Ejemplos de uso\nConexión\nSustituyen a un enlace cuando la conexión entre dos oraciones es evidente. \nSe emplean principalmente en tres casos:\nCausa-efecto\nConclusión o resumen\nVerificación o explicación"
+      ],
+      "images": 0
+    },
+    {
+      "slide": 46,
+      "kind": "regla / explicación",
+      "text_blocks": [
+        "3. Uso de los dos puntos",
+        "1. Causa-efecto\nVinculan una situación con su origen o su consecuencia.\nEjemplo:\nCerraron el negocio: no podían pagar el alquiler.\nEl árbitro cometió un error grave: el partido se descontroló."
+      ],
+      "images": 0
+    },
+    {
+      "slide": 47,
+      "kind": "regla / explicación",
+      "text_blocks": [
+        "3. Uso de los dos puntos",
+        "2. Conclusión o resumen\nPara cerrar una exposición anterior con una síntesis.\nEjemplo:\nEl desempleo aumenta, la inflación sube y el consumo baja: la crisis económica es innegable."
+      ],
+      "images": 0
+    },
+    {
+      "slide": 48,
+      "kind": "regla / explicación",
+      "text_blocks": [
+        "3. Uso de los dos puntos",
+        "3. Verificación o explicación\nPara ilustrar o aclarar un concepto general enunciado previamente.\nEjemplo: \nLa planta necesita cuidados específicos: riego moderado y luz indirecta."
+      ],
+      "images": 0
+    },
+    {
+      "slide": 49,
+      "kind": "actividad / ejercicio",
+      "text_blocks": [
+        "3. Uso de los dos puntos",
+        "Ejercicio 1/4\n\nEl restaurante se quedó sin ingredientes a mitad de la noche tuvieron que cerrar las puertas antes de tiempo.",
+        "Causa-efecto\nConclusión o resumen\nVerificación o explicación"
+      ],
+      "images": 0
+    },
+    {
+      "slide": 50,
+      "kind": "actividad / ejercicio",
+      "text_blocks": [
+        "3. Uso de los dos puntos",
+        "Ejercicio 2/4\n\nElla es una atleta excepcional entrena seis horas diarias, cuida su alimentación y nunca falta a una sesión.",
+        "Causa-efecto\nConclusión o resumen\nVerificación o explicación"
+      ],
+      "images": 0
+    },
+    {
+      "slide": 51,
+      "kind": "actividad / ejercicio",
+      "text_blocks": [
+        "3. Uso de los dos puntos",
+        "Ejercicio 3/4\n\nEl motor empezó a fallar, la batería se descargó por completo y los frenos no respondían el auto quedó totalmente inservible.",
+        "Causa-efecto\nConclusión o resumen\nVerificación o explicación"
+      ],
+      "images": 0
+    },
+    {
+      "slide": 52,
+      "kind": "actividad / ejercicio",
+      "text_blocks": [
+        "3. Uso de los dos puntos",
+        "Ejercicio 4/4\n\nNo compres ese boleto de avión hoy los precios bajan a la mitad a partir de la medianoche.",
+        "Causa-efecto\nConclusión o resumen\nVerificación o explicación"
+      ],
+      "images": 0
+    },
+    {
+      "slide": 53,
+      "kind": "portada / separador",
+      "text_blocks": [
+        "Content - Revisión QA x DI",
+        "23 junio, 2026"
+      ],
+      "images": 0
+    },
+    {
+      "slide": 54,
+      "kind": "agenda",
+      "text_blocks": [
+        "Orden del día",
+        "¿Qué prefieres?\nRecapitulación\nUso de los dos puntos (continuación)"
+      ],
+      "images": 0
+    },
+    {
+      "slide": 55,
+      "kind": "actividad / ejercicio",
+      "text_blocks": [
+        "¿Qué prefieres?",
+        "¿Qué tan popular es tu elección?\n¡Descúbrelo!"
+      ],
+      "images": 0
+    },
+    {
+      "slide": 56,
+      "kind": "repaso (remite a reglas anteriores)",
+      "text_blocks": [
+        "2. Recapitulación",
+        "Enumeración\nAyer compré tres libros: uno de historia, una novela y un poemario.\n\nCitas textuales\nEl presidente afirmó: «No daremos un paso atrás»."
+      ],
+      "images": 0
+    },
+    {
+      "slide": 57,
+      "kind": "repaso (remite a reglas anteriores)",
+      "text_blocks": [
+        "2. Recapitulación",
+        "Conexión\nCausa-efecto\nCerraron el negocio: no podían pagar el alquiler.\n\nConclusión o resumen\nEl desempleo aumenta, la inflación sube y el consumo baja: la crisis económica es innegable."
+      ],
+      "images": 0
+    },
+    {
+      "slide": 58,
+      "kind": "repaso (remite a reglas anteriores)",
+      "text_blocks": [
+        "2. Recapitulación",
+        "Conexión\n3. Verificación o explicación\nLa planta necesita cuidados específicos: riego moderado y luz indirecta."
+      ],
+      "images": 0
+    },
+    {
+      "slide": 59,
+      "kind": "regla / explicación",
+      "text_blocks": [
+        "3. Uso de los dos puntos",
+        "1. Saludos\nSe colocan tras la fórmula de saludo. La palabra que sigue a los dos puntos debe escribirse en un renglón aparte y comenzar con mayúscula.\nEjemplo:\nEstimada colega:\nLe escribo para informarle..."
+      ],
+      "images": 0
+    },
+    {
+      "slide": 60,
+      "kind": "regla / explicación",
+      "text_blocks": [
+        "3. Uso de los dos puntos",
+        "2. Textos jurídicos y administrativos\nSe emplean después del verbo que describe la acción legal o administrativa (CERTIFICA, EXPONE, SOLICITA). La palabra que sigue empieza con mayúscula en párrafo independiente.\nEjemplo:\nCERTIFICA:\nQue el alumno ha cumplido con las horas..."
+      ],
+      "images": 0
+    },
+    {
+      "slide": 61,
+      "kind": "regla / explicación",
+      "text_blocks": [
+        "3. Uso de los dos puntos",
+        "3. Títulos y epígrafes\nSe usan para separar el tema general de un aspecto parcial, o el título de un libro de su subtítulo.\nEjemplo:\nLa Ilustración: luces y sombras del siglo XVIII"
+      ],
+      "images": 0
+    },
+    {
+      "slide": 62,
+      "kind": "portada / separador",
+      "text_blocks": [
+        "Content - Revisión QA x DI",
+        "20 julio, 2026"
+      ],
+      "images": 0
+    },
+    {
+      "slide": 63,
+      "kind": "agenda",
+      "text_blocks": [
+        "Orden del día",
+        "Respuestas de la evaluación\nUso de la coma"
+      ],
+      "images": 0
+    },
+    {
+      "slide": 64,
+      "kind": "captura de resultados",
+      "text_blocks": [
+        "1. Respuestas de la evaluación"
+      ],
+      "images": 1
+    },
+    {
+      "slide": 65,
+      "kind": "captura de resultados",
+      "text_blocks": [
+        "1. Respuestas de la evaluación"
+      ],
+      "images": 1
+    },
+    {
+      "slide": 66,
+      "kind": "captura de resultados",
+      "text_blocks": [
+        "1. Respuestas de la evaluación"
+      ],
+      "images": 1
+    },
+    {
+      "slide": 67,
+      "kind": "captura de resultados",
+      "text_blocks": [
+        "1. Respuestas de la evaluación"
+      ],
+      "images": 1
+    },
+    {
+      "slide": 68,
+      "kind": "captura de resultados",
+      "text_blocks": [
+        "1. Respuestas de la evaluación"
+      ],
+      "images": 1
+    },
+    {
+      "slide": 69,
+      "kind": "regla / explicación",
+      "text_blocks": [
+        "2. Uso de la coma",
+        "1. Separar incisos\nEstos son parte de una oración que se intercala con la oración principal, la cual tiene sentido explicativo o añade algo más. La coma se colocará al inicio y al término del inciso.\nEjemplo:\nDebemos tomar una decisión, él lo sabe muy bien, no hay más tiempo."
+      ],
+      "images": 0
+    },
+    {
+      "slide": 70,
+      "kind": "actividad / ejercicio",
+      "text_blocks": [
+        "2. Uso de la coma",
+        "1. Separar incisos - Ejercicio\nEstamos esperando a Sebastián el dueño del edificio para que nos abra la puerta.\nLuis el hijo de mi amiga es artista plástico.\nLos vientos del Sur que en aquellas regiones son muy frecuentes incomodan a los viajeros."
+      ],
+      "images": 0
+    },
+    {
+      "slide": 71,
+      "kind": "regla / explicación",
+      "text_blocks": [
+        "2. Uso de la coma",
+        "2. Separar elementos de un listado\nSi la enumeración es completa, antes del último elemento, se deberá poner una conjunción.\nEjemplo:\nCuando vayas al mercado no olvides comprar huevos, mandarinas, limones, guayabas, leche y pan.\nSalí tarde de casa y me di cuenta que no llevaba chamarra, llaves, celular ni dinero."
+      ],
+      "images": 0
+    },
+    {
+      "slide": 72,
+      "kind": "actividad / ejercicio",
+      "text_blocks": [
+        "2. Uso de la coma",
+        "2. Separar elementos de un listado - Ejercicio\nRedacta una oración de una enumeración completa, empleando alguna de las siguientes conjunciones:\ny\ne\nni"
+      ],
+      "images": 0
+    },
+    {
+      "slide": 73,
+      "kind": "regla / explicación",
+      "text_blocks": [
+        "2. Uso de la coma",
+        "2. Separar elementos de un listado\nSi la enumeración está incompleta, se puede utilizar la palabra etcétera, puntos suspensivos o punto.\nEjemplos:\nEn el universo hay estrellas, planetas, constelaciones, etc.\nEn el universo hay estrellas, planetas, constelaciones…\nEn el universo hay estrellas, planetas, constelaciones."
+      ],
+      "images": 0
+    },
+    {
+      "slide": 74,
+      "kind": "portada / separador",
+      "text_blocks": [
+        "Content - Revisión QA x DI",
+        "04 agosto, 2026"
+      ],
+      "images": 0
+    },
+    {
+      "slide": 75,
+      "kind": "agenda",
+      "text_blocks": [
+        "Orden del día",
+        "Uso de la coma (continuación)"
+      ],
+      "images": 0
+    },
+    {
+      "slide": 76,
+      "kind": "regla / explicación",
+      "text_blocks": [
+        "1. Uso de la coma",
+        "3. Separar el sujeto\nEl sujeto sirve como vocativo del resto de la oración, si va en la parte media del enunciado se escribe entre dos comas.\nEjemplo:\nVioleta, deja de saltar en el sillón.\nEstoy alegre, Isabel, por el regalo."
+      ],
+      "images": 0
+    },
+    {
+      "slide": 77,
+      "kind": "actividad / ejercicio",
+      "text_blocks": [
+        "1. Uso de la coma",
+        "Separar el sujeto - Ejercicio\nAlfredo creo que estabas equivocado.\n\nTe extrañé mucho mamá.\n\nNo sé amigo si podré ir hoy."
+      ],
+      "images": 0
+    },
+    {
+      "slide": 78,
+      "kind": "regla / explicación",
+      "text_blocks": [
+        "1. Uso de la coma",
+        "4. Separar interjecciones\nEn una oración, se emplea coma para separar interjecciones.\nEjemplo:\n¡Eh!, creo que no entendí lo que me quería decir.\n¡Bravo!, por fin pudo regresar a casa."
+      ],
+      "images": 0
+    },
+    {
+      "slide": 79,
+      "kind": "actividad / ejercicio",
+      "text_blocks": [
+        "1. Uso de la coma",
+        "Separar interjecciones - Ejercicio\n\nRedacta una oración empleando una interjección."
+      ],
+      "images": 0
+    },
+    {
+      "slide": 80,
+      "kind": "regla / explicación",
+      "text_blocks": [
+        "1. Uso de la coma",
+        "5. Separar expresiones que sirven para conectar oraciones.\nNo me gusta el colegio, mejor dicho, no me gusta estudiar.\nPor último, me despido de todos.\nEn primer lugar, debemos tener todo preparado para la tarde."
+      ],
+      "images": 0
+    },
+    {
+      "slide": 81,
+      "kind": "regla / explicación",
+      "text_blocks": [
+        "1. Uso de la coma",
+        "[TABLA]\na saber | además | ahora bien | con todo | en cambio\nen fin | en primer lugar | en resumen | en tal caso | es decir\nesto es | mejor dicho | no obstante | o sea | por consiguiente\npor ejemplo | por el contrario | por lo tanto | por tanto | por último\npor un/otro lado | por una/otra parte | pues bien | sin embargo | "
+      ],
+      "images": 0
+    },
+    {
+      "slide": 82,
+      "kind": "actividad / ejercicio",
+      "text_blocks": [
+        "1. Uso de la coma",
+        "Separar expresiones que conectan oraciones - Ejercicio\n\nRedacta una oración empleando una expresión conectora."
+      ],
+      "images": 0
+    },
+    {
+      "slide": 83,
+      "kind": "portada / separador",
+      "text_blocks": [
+        "Content - Revisión QA x DI",
+        "17 agosto, 2026"
+      ],
+      "images": 0
+    },
+    {
+      "slide": 84,
+      "kind": "agenda",
+      "text_blocks": [
+        "Orden del día",
+        "Uso de la coma (continuación)"
+      ],
+      "images": 0
+    },
+    {
+      "slide": 85,
+      "kind": "regla / explicación",
+      "text_blocks": [
+        "1. Uso de la coma",
+        "6. Separar adverbios\nAdverbio de modo: naturalmente\nAdverbio de afirmación: efectivamente\nAdverbio de tiempo: generalmente\nEjemplo:\nAmbos estábamos en la entrada del cine y ya estaba oscuro, naturalmente, él tuvo que irse porque era tarde."
+      ],
+      "images": 0
+    },
+    {
+      "slide": 86,
+      "kind": "regla / explicación",
+      "text_blocks": [
+        "1. Uso de la coma",
+        "7. Separar elementos con carácter incidental o causal dentro de la oración.\n\nEjemplo:\nCuando me desperté, ella estaba incorporada en las almohadas.\nSi no comes un poco, te pondrás enfermo."
+      ],
+      "images": 0
+    },
+    {
+      "slide": 87,
+      "kind": "regla / explicación",
+      "text_blocks": [
+        "1. Uso de la coma",
+        "8. Conjunciones (y, e, ni, o, u) \nLa coma se escribe delante de las conjunciones cuando engloba los elementos del predicando pero no forma parte de los elementos listados.\nEjemplo:\nDebía comprar dulces, chocolates y un bizcocho, ni uno de ellos trajo.\nAna coloreó un corazón, una flor, una mariposa y un oso, y también los pegó en su cuaderno."
+      ],
+      "images": 0
+    },
+    {
+      "slide": 88,
+      "kind": "regla / explicación",
+      "text_blocks": [
+        "1. Uso de la coma",
+        "8. Conjunciones (y, e, ni, o, u) \n\nEjemplo:\nCambié el techo, piso y decoración interior de una mansión, y los dueños quedaron satisfechos con mi trabajo."
+      ],
+      "images": 0
+    },
+    {
+      "slide": 89,
+      "kind": "regla / explicación",
+      "text_blocks": [
+        "1. Uso de la coma",
+        "8. Conjunciones (y, e, ni, o, u) \nLa coma se escribe cuando la conjunción tiene un sentido equivalente a la palabra pero.\nEjemplo:\nLe dijimos a José que no debía hacerlo, y aún así arriesgó todo."
+      ],
+      "images": 0
+    },
+    {
+      "slide": 90,
+      "kind": "portada / separador",
+      "text_blocks": [
+        "Content - Revisión QA x DI",
+        "17 septiembre, 2026"
+      ],
+      "images": 0
+    },
+    {
+      "slide": 91,
+      "kind": "agenda",
+      "text_blocks": [
+        "Orden del día",
+        "Uso de la coma (formulario)\n¿Tú o usted?"
+      ],
+      "images": 0
+    },
+    {
+      "slide": 92,
+      "kind": "captura de resultados",
+      "text_blocks": [
+        "1. Uso de la coma (formulario)"
+      ],
+      "images": 1
+    },
+    {
+      "slide": 93,
+      "kind": "captura de resultados",
+      "text_blocks": [
+        "1. Uso de la coma (formulario)"
+      ],
+      "images": 1
+    },
+    {
+      "slide": 94,
+      "kind": "regla / explicación",
+      "text_blocks": [
+        "2. ¿Tú o usted?",
+        "1. Mezcla de tratamientos\nEmpezar tuteando y pasar a usted en la misma sección/recurso.\nEjemplo:\nPaso 1. Descarga tu plantilla\nPaso 2. Envíe su archivo"
+      ],
+      "images": 0
+    },
+    {
+      "slide": 95,
+      "kind": "regla / explicación",
+      "text_blocks": [
+        "2. ¿Tú o usted?",
+        "2. El “usted” distante\nTiende a arrastrar estructuras pasivas, burocráticas.\nEjemplo:\n🥶 \"El participante deberá considerar...\"\n🤗 “Tome en cuenta este detalle antes de avanzar\""
+      ],
+      "images": 0
+    },
+    {
+      "slide": 96,
+      "kind": "regla / explicación",
+      "text_blocks": [
+        "2. ¿Tú o usted?",
+        "3. El “tú” artificial\nForzar modismos juveniles o un tuteo excesivamente coloquial.\nEjemplo:\n🤨 \"Sabemos que a veces da flojerita llenar formatos. Tómate un tiempito, prepárate un cafecito y platícanos aquí tus súper logros. ¡Tú puedes, crack!\" \n😎 \"Tu autoevaluación anual es el espacio para reflexionar sobre tus metas y el impacto de tu trabajo. Antes de comenzar, te sugerimos revisar tus proyectos clave de los últimos meses\""
+      ],
+      "images": 0
+    },
+    {
+      "slide": 97,
+      "kind": "regla / explicación",
+      "text_blocks": [
+        "2. ¿Tú o usted?",
+        "[TABLA]\nCriterio | Opta por “tú” | Opta por “usted”\nAudiencia  | Equipos internos, perfiles operativos, audiencias jóvenes o cultura horizontal.  | Mandos directivos, clientes externos, sectores formales (legal, bancario) o audiencias multisectoriales. \nObjetivo  | Acompañamiento cercano, tutoriales ágiles, microaprendizaje o mentoría.  | Procesos normativos, cumplimiento (compliance), trámites institucionales o comunicados oficiales. \nVoz de la marca  | Innovadora, accesible, conversacional.  | Institucional, tradicional, sobria."
+      ],
+      "images": 0
+    }
+  ]
+}

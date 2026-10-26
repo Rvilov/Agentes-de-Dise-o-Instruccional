@@ -1,0 +1,3 @@
+interface:
+  display_name: "QA Final de Cursos"
+  short_description: "Integra todos los reportes, aplica gates y controla ciclos de autocorrección."

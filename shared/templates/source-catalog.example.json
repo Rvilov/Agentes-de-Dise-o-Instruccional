@@ -1,0 +1,7 @@
+{
+  "schema_version": "1.4.1",
+  "sources": [
+    {"id":"F1","path":"sources/material-base.pptx","role":"principal","factual":true,"priority":1,"sha256":"HASH_REAL_SHA256_OPCIONAL"},
+    {"id":"G1","path":"sources/guia-qa.pptx","role":"guideline","factual":false,"priority":90}
+  ]
+}

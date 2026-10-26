@@ -1,0 +1,3 @@
+interface:
+  display_name: "Orquestador de Producción de Cursos"
+  short_description: "Prepara fuentes, ficha maestra, cobertura y producción Word trazable."

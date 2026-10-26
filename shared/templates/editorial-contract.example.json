@@ -1,0 +1,27 @@
+{
+  "schema_version": "1.4.0",
+  "resource_id": "R2",
+  "resource_type": "rise",
+  "blocks": [
+    {
+      "id": "R2-B1",
+      "title": "Reconoce el paso",
+      "format": "acordeon con dos paneles",
+      "direction": "Mostrar una imagen representativa para cada caso y resaltar su diferencia principal.",
+      "block_kind": "accordion",
+      "stock_decision": {
+        "needed": true,
+        "reason": "Los casos representan actividades laborales distintas que requieren escenas concretas."
+      },
+      "visuals": [
+        {"kind": "stock_image", "purpose": "Identificar la primera situacion laboral con contexto reconocible."},
+        {"kind": "stock_image", "purpose": "Identificar la segunda situacion laboral en un entorno diferente."}
+      ],
+      "panels": [
+        {"id": "R2-P1", "kind": "stock_image", "purpose": "Distinguir el caso uno en su entorno de trabajo.", "asset_id": "AS1"},
+        {"id": "R2-P2", "kind": "stock_image", "purpose": "Distinguir el caso dos en su entorno de trabajo.", "asset_id": "AS2"}
+      ],
+      "stock_assets": ["AS1", "AS2"]
+    }
+  ]
+}
