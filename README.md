@@ -4,7 +4,7 @@
 
 Funciona con **Claude Code** y con **Codex** (OpenAI). Todo se ejecuta en local: nada se sube a Drive ni a otros servicios salvo petición explícita.
 
-[![Descargar v1.4.1](https://img.shields.io/badge/Descargar-v1.4.1%20(.zip)-2ea44f?style=for-the-badge&logo=github)](https://github.com/Rvilov/Agentes-de-Dise-o-Instruccional/releases/latest/download/course-agent-suite-v1.4.1.zip)
+[![Descargar v1.4.1](https://img.shields.io/badge/Descargar-v1.4.1%20(.zip)-2ea44f?style=for-the-badge&logo=github)](https://github.com/Rvilov/Agentes-de-Dise-o-Instruccional/archive/refs/heads/main.zip)
 ![Tests](https://img.shields.io/badge/tests-37%2F37-brightgreen)
 ![Skills](https://img.shields.io/badge/skills-11-blue)
 ![Plataformas](https://img.shields.io/badge/Claude%20Code%20%7C%20Codex-compatible-informational)
@@ -37,9 +37,7 @@ Funciona con **Claude Code** y con **Codex** (OpenAI). Todo se ejecuta en local:
 
 | Opción | Enlace |
 |---|---|
-| **ZIP de la versión estable (recomendado)** | [course-agent-suite-v1.4.1.zip](https://github.com/Rvilov/Agentes-de-Dise-o-Instruccional/releases/latest/download/course-agent-suite-v1.4.1.zip) |
-| Página de releases | [github.com/Rvilov/Agentes-de-Dise-o-Instruccional/releases](https://github.com/Rvilov/Agentes-de-Dise-o-Instruccional/releases) |
-| Código de la rama `main` | [main.zip](https://github.com/Rvilov/Agentes-de-Dise-o-Instruccional/archive/refs/heads/main.zip) |
+| **Descargar ZIP (recomendado)** | [Agentes-de-Dise-o-Instruccional-main.zip](https://github.com/Rvilov/Agentes-de-Dise-o-Instruccional/archive/refs/heads/main.zip) |
 | Clonar con git | `git clone https://github.com/Rvilov/Agentes-de-Dise-o-Instruccional.git` |
 
 ---
@@ -115,7 +113,7 @@ flowchart TD
 
 ### Instalar en un proyecto
 
-Descarga y descomprime el ZIP, y desde esa carpeta ejecuta:
+Descarga y descomprime el ZIP (se crea la carpeta `Agentes-de-Dise-o-Instruccional-main`), y desde esa carpeta ejecuta:
 
 ```bash
 # Claude Code
