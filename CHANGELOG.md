@@ -1,3 +1,20 @@
+# Changelog
+
+## 1.5.0 - 2026-10-27: reduced repeated context, preserved hard gates
+
+- Replaced the eleven patch-accumulating `SKILL.md` bodies with current short instructions, each with a clear owner and selectively read references.
+- Replaced the long project `CLAUDE.md` / `AGENTS.md` injection with a single 158-word policy pointing to the canonical workflow.
+- Changed routine Content QA validation to a compact 27-control register and file-hash check; keep full source/index and deep-check them **once at installation**. Open only relevant slides when necessary.
+- Combined seven per-resource reviewers into three grouped JSON passes, retaining seven specialist identities, evidence and assignment checks.
+- Course consistency runs once on all resources after editorial changes and before final fidelity; SHA freshness is verified during final QA.
+- Source Fidelity runs once on the definitive Word, after format/language review. Any later Word edit invalidates its SHA, requiring focused re-review.
+- Added `--phase draft|final` and `--compact` on mechanical quality gates; added `--enforce-three-passes` and `--compact` to the final-qa aggregator.
+- Added `verify_review_passes.py`, `select_content_qa_controls.py`, optional model-routing preferences and reproducible static-instruction benchmark.
+- Reduced fixed SKILL+global instructional text by 82.35% UTF-8 bytes vs v1.4.1; this is **not** an API token-savings guarantee.
+- Preserved the 97-slide original, its 27 controls, source-fidelity evidence, stock search proofs, note-format guarantees and Word rendering requirements.
+
+---
+
 # Version 1.4.1 - Evidencia factual y bloqueo de QA integral
 
 - `shared/scripts/fidelity_gate.py`: nuevo gate de evidencia por cada afirmacion, integridad SHA-256 del Word y fuentes, cita literal en ubicacion real, clasificacion de todos los parrafos de Contenido, cobertura de temas y revision semantica independiente por claim/tema.

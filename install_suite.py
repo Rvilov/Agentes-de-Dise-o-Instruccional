@@ -2,6 +2,7 @@
 """Install/update the portable 11-skill suite without deleting course project data."""
 import argparse
 import shutil
+import sys
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -49,6 +50,12 @@ def main():
     skills=sorted(x for x in (root/'skills').iterdir() if x.is_dir() and (x/'SKILL.md').is_file())
     if len(skills)!=11:
         raise SystemExit(f'Se esperaban 11 skills, hay {len(skills)}; no actualizar parcialmente.')
+    # Deep source integrity is checked once per installation, never sent to model context.
+    sys.path.insert(0,str(shared_src/'scripts'))
+    from validate_content_qa_source import audit as validate_full_style_guide
+    style_check=validate_full_style_guide(shared_src)
+    if style_check['status']!='OK':
+        raise SystemExit('Content QA source corrupt or incomplete: '+str(style_check['errors']))
     affected=[dest/x.name for x in skills]+[shared_dest,instructions]
     print(f'Proyecto: {project}\nPlataforma: {args.platform}\nSkills: {len(skills)}')
     if args.dry_run:

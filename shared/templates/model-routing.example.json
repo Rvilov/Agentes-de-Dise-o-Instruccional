@@ -1,0 +1,10 @@
+{
+  "purpose": "Optional per-host model preference; do not pass unsupported flags",
+  "stages": {
+    "learning": {"preferred_tier": "balanced", "semantic_review_required": true},
+    "editorial": {"preferred_tier": "light_or_balanced", "formal_checks_by_scripts": true},
+    "fidelity": {"preferred_tier": "capable_reasoning", "semantic_review_required": true},
+    "course_consistency": {"preferred_tier": "balanced", "once_per_course": true}
+  },
+  "note": "Descriptive preferences only. Host-specific routing requires supported Claude Code/Codex settings and explicit configuration."
+}

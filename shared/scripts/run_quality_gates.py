@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Mandatory preflight for every resource in Course Agent Suite v1.4.1.
+"""Mandatory preflight for every resource in Course Agent Suite v1.5.0.
 
 This verifies structural evidence for source fidelity but does not automatically
 judge semantic entailment; independent source-reviewer QA is still required.
@@ -19,6 +19,8 @@ def main():
     ap.add_argument('--platform',choices=['auto','codex','claude'],default='auto')
     ap.add_argument('--report',type=Path)
     ap.add_argument('--orientation',choices=['portrait','landscape'],default='portrait')
+    ap.add_argument('--phase',choices=['draft','final'],default='final',help='draft omits final Fidelity and cannot authorize integral release')
+    ap.add_argument('--compact',action='store_true',help='Print only the overall result and failed gate details')
     args=ap.parse_args()
     root=args.project_dir.expanduser().resolve()
     docx=args.docx if args.docx.is_absolute() else root/args.docx
@@ -37,10 +39,11 @@ def main():
     steps=[
         ('notes_canonical',[str(shared/'editorial_contract.py'),'audit','--contract',str(contract),'--docx',str(docx),'--strict']),
         ('stock_execution',[str(shared/'audit_stock_execution.py'),'--contract',str(contract),'--search-log',str(stock_log),'--docx',str(docx),'--strict']),
-        ('factual_fidelity',[str(shared/'fidelity_gate.py'),'audit','--project-dir',str(root),'--resource-id',rid,'--docx',str(docx),'--strict','--report',str(q/(rid+'.fidelity-preflight.json'))]),
         ('editorial_length',[str(tf/'audit_editorial_notes.py'),str(docx),'--strict']),
         ('document_structure',[str(tf/'audit_docx_structure.py'),str(docx),'--orientation',args.orientation,'--traceability',str(trace),'--strict']),
     ]
+    if args.phase=='final':
+        steps.append(('factual_fidelity',[str(shared/'fidelity_gate.py'),'audit','--project-dir',str(root),'--resource-id',rid,'--docx',str(docx),'--strict','--report',str(q/(rid+'.fidelity-preflight.json'))]))
     try:
         resource_type=json.loads(contract.read_text(encoding='utf-8')).get('resource_type','').lower()
     except (OSError,ValueError):resource_type=''
@@ -63,13 +66,15 @@ def main():
         except (OSError,subprocess.TimeoutExpired) as e:
             findings.append({'gate':name,'pass':False,'detail':str(e)})
     pass_all=all(x['pass'] for x in findings)
-    report={'resource_id':rid,'docx':str(docx),'pass_machine_gates':pass_all,
+    report={'resource_id':rid,'docx':str(docx),'phase':args.phase,'pass_machine_gates':pass_all, 'integral_release_eligible':pass_all and args.phase=='final',
             'gates':findings,'human_review_required':['fidelidad semantica: evidencia realmente respalda la afirmacion', 'cobertura de todas las afirmaciones y excepciones', 'coherencia visual','licencias y URLs de stock','render por pagina','accesibilidad']}
     text=json.dumps(report,ensure_ascii=False,indent=2)
     if args.report:
         out=args.report if args.report.is_absolute() else root/args.report
         out.parent.mkdir(parents=True,exist_ok=True);out.write_text(text+'\n',encoding='utf-8')
-    print(text)
+    if args.compact:
+        print(json.dumps({'resource_id':rid,'phase':args.phase,'pass':pass_all,'integral_release_eligible':report['integral_release_eligible'],'failed':[{'gate':x['gate'],'detail':x['detail'][-500:]} for x in findings if not x['pass']]},ensure_ascii=False))
+    else:print(text)
     if not pass_all:sys.exit(1)
 
 if __name__=='__main__':main()

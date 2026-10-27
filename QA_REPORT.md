@@ -1,40 +1,42 @@
-# QA de Course Agent Suite v1.4.1
+# QA Report - Course Agent Suite v1.5.0
 
-## Resultado
+## Result
 
-**VALIDADA PARA INSTALACION Y PRUEBAS DE CURSO** en Codex y Claude Code. Se agrego una compuerta de fidelidad factual que impide verde integral sin evidencia verificable y revision semantica independiente. **No se ha probado todavia esta nueva version contra un curso completo real de usuario.**
+**PASS (synthetic technical validation).** Eleven skills pass `quick_validate.py`; 48 Python regression tests pass (37 prior + 11 new). The full source Content QA guide still contains 97 pages/slides; its 27 control register, inventory SHA and the original PPTX are mutually consistent. Both full and fast source-integrity checks passed.
 
-## Guardarrailes nuevos (material base)
+## Measured instruction footprint
 
-- `fidelity_gate.py prepare`: enumera TODAS las unidades de texto de la columna `Contenido del Recurso` en el Word real. Inicializa estatus `PENDIENTE` (no se autopresume respaldo).
-- `fidelity_gate.py audit --strict`: coteja hashes de Word/fuentes; archivos reales en `sources/` versus catalogo; citas exactas con ubicaciones DOCX/PPTX/PDF/TXT; afirmaciones con fuente factual (no guia DI o stock); links unidad-claim; temas obligatorios-claims y su justificacion; y exige valoracion independiente por cada afirmacion/tema.
-- `audit_course_coverage.py --strict`: comprueba todos los recursos declarados y la cobertura de todos los temas **registrados** como obligatorios en el contrato del curso.
-- `run_quality_gates.py`: anade `factual_fidelity` a los gates existentes. El preflight falla ante ledger/revision incompleta o Word/fuente desactualizada.
-- `aggregate_reports.py`: reejecuta la comprobacion sobre el Word/fuente actual, exige reporte JSON de `source-fidelity-reviewer` en el conjunto de informes y bloquea QA integral si falta evidencia. Estado ROJO devuelve codigo de salida distinto de cero.
-- Orquestador y Productor ahora crean o requieren los registros `qa/source-catalog.json`, `qa/course-coverage-contract.json`, `qa/course-resource-index.json`, `qa/R#.fidelity-ledger.json`, `qa/R#.fidelity-review.json`. Se mantienen **fuera de los Word editoriales**.
-- Toda edicion posterior de un Word cambia su SHA-256 y anula la revision anterior, incluso si solo fue una reescritura estilistica.
+Scope: literal text of the **eleven SKILL.md files plus the one global project instruction fragment**, comparing official v1.4.1 ZIP against v1.5.0 source. It **excludes** referenced source material, retrieved course content, model responses, OCR, cache behavior, API overhead and dynamic prompts.
 
-## Pruebas realmente ejecutadas
+| Measure | v1.4.1 | v1.5.0 | Reduction |
+|---|---:|---:|---:|
+| UTF-8 bytes of fixed skill/global text | 115,568 | 20,400 | **82.35%** |
+| Whitespace-delimited words | 14,840 | 2,614 | **82.39%** |
+| Planned reviewer invocations per resource | 7 | 3 | **57.14%** |
+| Content QA indexes loaded by default into model context | 97-slide index | 27-control register | On-demand |
 
-- **37/37 unitarias** APROBADAS: 13 de v1.4.0 para notas/stock y 24 nuevas para fidelidad (claim sin fuente, cita inventada, cita en ubicacion incorrecta, fuente alterada, Word alterado, tema omitido, revision generica verde, reporte ausente, archivo no registrado, fuente-guia usada como hecho, compatibilidad de locator TXT/DOCX/PPTX, auditoria de curso, intake incompleto y bloqueo de QA Final).
-- **2/2 instalaciones y actualizaciones** sobre proyectos ya existentes: Codex y Claude Code, ejecutadas dos veces por entorno. Conservan `sources`, `qa`, `resources`, `outputs` e instrucciones fuera del bloque administrado; backup generado.
-- **6/6 gates de preentrega** APROBADOS en cada entorno con un recurso/fuente **sintetico**: `notes_canonical`, `stock_execution`, `factual_fidelity`, `editorial_length`, `document_structure`, `visual_plan`.
-- **2/2 gates de cobertura de curso** APROBADOS con matriz de temas sintetica en ambos entornos.
-- **11/11 skills** validadas mediante `quick_validate.py`.
-- **97/97 diapositivas** de la PPT normativa Content QA x DI indexadas, **27 controles** e integridad SHA-256 `ec8dc8025e76e2232951a099ad32e5a73890a5687ba8fbefd497c41271ddebe5` verificados.
-- **Word de prueba** renderizado a PNG y revisado visualmente: una pagina A4 vertical, cabecera unica y columnas sin desbordes. No se entrega como recurso del usuario.
-- Scripts Python compilados sin errores.
+This is an actual **static-text** measurement, not measured billable tokens. Invocation savings are a workflow projection assuming the host executes each group as one shared-context review. They may differ in Claude Code and Codex. Reproduce the first two rows using `shared/scripts/benchmark_instruction_footprint.py --baseline-zip <v1.4.1.zip>`.
 
-## Limitaciones importantes
+## Regression coverage
 
-1. Los tests utilizan material fuente **sintetico**; NO acreditan que los recursos actuales de Nestle, Grupo FAME u otro cliente esten aprobados.
-2. Las comprobaciones literales y SHA-256 acreditan **existencia de fragmentos e integridad de version**, pero NO demuestran por si solas que un fragmento respalde semanticamente cada claim. Esa comprobacion requiere una segunda lectura por `source-fidelity-reviewer`, registrada de forma individual.
-3. El script no descubre automaticamente TODO el conocimiento obligatorio en una fuente. Un agente/humano debe construir la matriz de temas completa y comprobar omisiones contra las fuentes; la auditoria verifica **todos los temas registrados** y detecta fuentes documentales no registradas.
-4. PDF escaneado, texto en imagen, contenido audiovisual sin transcripcion y formatos de fuente no compatibles no se pueden considerar verificaciones automáticas; registrar necesidad de inspeccion manual o version textual aprobada. No usar OCR ni conocimiento general como sustituto silencioso.
-5. Citas y reportes externos pueden escribirse incorrectamente por un agente; esta suite impide muchos errores verificables y exige juicio independiente, pero no garantiza que un modelo nunca produzca una falsedad.
-6. Los Word existentes NO se actualizan automaticamente al instalar. Requieren migracion a los sidecars de evidencia, una revision independiente y nuevos QA gates.
-7. Validacion de stock real y licencias depende de los conectores/proveedores disponibles; las pruebas de stock anteriores son simuladas.
+- Correct grouped stages and reviewer identities are required; missing reviewers, stage reordering or an editorial group that is not approved blocks integral green.
+- Required course consistency is one course-wide report with all declared current Word SHA-256 hashes, completed after editorial and before final source fidelity.
+- Final semantic fidelity report must have been completed after editorial and must match current final Word/source hashes. A Word edited after approval blocks release.
+- Claims with fake quotes, invalid locations, unregistered sources, missing source topics or incomplete review explanations fail the previous source gate.
+- All 27 style controls must be covered by an assigned reviewer with appropriate evidence; role mismatch fails strict grouped QA.
+- Draft mechanical checks may run without expensive fidelity; their result explicitly indicates `integral_release_eligible = false`.
+- Existing Word editorial, visual-stock and stock-search guardrails pass the earlier regressions; no new permissions to invent stock or to skip rendering were introduced.
+- Installation update passed in **Codex and Claude Code**, preserving `sources/`, `templates/`, `resources/`, `qa/`, `outputs/` and custom AGENTS/CLAUDE instructions.
 
-## Entrega
+## QA source
 
-Un Word editorial por recurso, **sin** citas, IDs ni fuentes en notas o contenido. Los detalles de trazabilidad y revision permanecen en `qa/`. Se conserva la regla de no subir recursos del cliente a servicios externos salvo peticion expresa; el ZIP de la herramienta se subira al Drive autorizado por el usuario.
+- Canonical 97-slide Content QA PPTX remains fully bundled and hash-verified; the deep inventory audit passes during installation.
+- Fast per-resource QA checks only the 27-control register and source checksum, **without reading the entire slide index into model context**.
+- The raw client sources and factual evidence remain the only authoritative basis for course claims.
+
+## Known limits
+
+- The lightweight-model preference is declared only as optional: native model selection varies by host and may require user settings. The installer does not force a tier.
+- Mechanical checks verify source quotation existence, document hashes and schema; they **cannot themselves determine semantic truth**. The independent Fidelity reviewer remains mandatory.
+- This is a synthetic regression and installed-suite test, not a live model-token benchmark or a real-course production audit. To establish a billable-token reduction, compare usage logs from the same course/materials on the same model and caching settings before and after upgrading.
+- QA logs remain local. No course deliverables were uploaded.

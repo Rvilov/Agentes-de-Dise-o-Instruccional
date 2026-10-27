@@ -1,6 +1,6 @@
 {
   "suite": "course-agent-suite",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "skills": [
     "accessibility-reviewer",
     "course-consistency-reviewer",
@@ -67,5 +67,26 @@
   "quality_gate_runner": "shared/scripts/run_quality_gates.py",
   "stock_required_without_search": "red_not_ready",
   "stock_no_match_or_access_blocked": "implementation_pending_not_ready",
-  "editorial_notes_fixed_schema": "indexed_title + resource_format + one_concrete_action + optional_video_stock_link"
+  "editorial_notes_fixed_schema": "indexed_title + resource_format + one_concrete_action + optional_video_stock_link",
+  "performance_policy": "shared/references/lean-workflow.md",
+  "review_pass_contract": "shared/references/review-pass-contract.md",
+  "review_passes": [
+    [
+      "pedagogical-reviewer",
+      "dynamism-reviewer",
+      "accessibility-reviewer"
+    ],
+    [
+      "visual-stock-reviewer",
+      "template-format-reviewer",
+      "language-humanizer"
+    ],
+    [
+      "source-fidelity-reviewer"
+    ]
+  ],
+  "course_consistency_frequency": "once_after_editorial_before_fidelity",
+  "content_qa_load_strategy": "27-control-register_first_97-slide-index_on-demand",
+  "fidelity_schedule": "once_after_final_editorial_changes;invalidate_on_word_change",
+  "model_routing": "optional_lightweight_for_form_capable_for_fidelity"
 }

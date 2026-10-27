@@ -69,6 +69,34 @@ def audit(shared_root: Path):
     }
 
 
+def audit_fast(shared_root: Path):
+    """Mechanical per-resource check. Do not ingest the 97-slide Markdown index."""
+    root=Path(shared_root)
+    refs=root/'references'
+    ppt=root/'source-guides'/'Content - Revisión QA x DI.pptx'
+    paths=[ppt,refs/'content-qa-control-register.json',
+           refs/'content-qa-full-slide-index.md',refs/'content-qa-slide-inventory.json',
+           refs/'content-qa-policy.md']
+    errors=[f'MISSING: {p}' for p in paths if not p.is_file()]
+    if errors:return {'status':'FAIL','errors':errors}
+    register=json.loads((refs/'content-qa-control-register.json').read_text(encoding='utf-8'))
+    inventory=json.loads((refs/'content-qa-slide-inventory.json').read_text(encoding='utf-8'))
+    h=hashlib.sha256()
+    with ppt.open('rb') as f:
+        for chunk in iter(lambda:f.read(1024*1024),b''):h.update(chunk)
+    checksum=h.hexdigest()
+    if checksum!=register.get('source_sha256') or checksum!=inventory.get('sha256'):
+        errors.append('CONTENT_QA_SOURCE_HASH_MISMATCH')
+    if register.get('source_slides')!=97 or len(register.get('controls',[]))!=27:
+        errors.append('CONTENT_QA_REGISTER_INCOMPLETE')
+    if inventory.get('slide_count')!=97 or len(inventory.get('slides',[]))!=97:
+        errors.append('CONTENT_QA_INVENTORY_INCOMPLETE')
+    ids=[c.get('id') for c in register.get('controls',[])]
+    if len(ids)!=len(set(ids)):errors.append('CONTENT_QA_DUPLICATE_IDS')
+    return {'status':'FAIL' if errors else 'OK','errors':errors,
+            'slides':97,'controls':len(ids),'mode':'fast_register_hash_only'}
+
+
 def main():
     p=argparse.ArgumentParser()
     p.add_argument('--root',type=Path,required=True,help='Path to the suite shared/ folder')

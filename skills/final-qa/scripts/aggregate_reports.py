@@ -16,7 +16,7 @@ def find_shared(script_path:Path):
     return None
 
 
-def analyze_content_qa(reports, shared):
+def analyze_content_qa(reports, shared, require_agent_ownership=False):
     if shared is None:
         return {
             'status':'ROJO','code':'CONTENT_QA_SOURCE_INCOMPLETE',
@@ -25,8 +25,8 @@ def analyze_content_qa(reports, shared):
         }
     import sys
     sys.path.insert(0,str(shared/'scripts'))
-    from validate_content_qa_source import audit
-    v=audit(shared)
+    from validate_content_qa_source import audit_fast
+    v=audit_fast(shared)
     if v['status']!='OK':
         return {'status':'ROJO','code':'CONTENT_QA_SOURCE_INCOMPLETE','validation':v,
                 'missing_controls':[],'problems':v['errors'],'covered':0,'total':None}
@@ -44,6 +44,8 @@ def analyze_content_qa(reports, shared):
             if result not in VALID_RESULTS:
                 problems.append(f'{code}: resultado inválido {result}')
                 continue
+            if require_agent_ownership and r.get('agent') not in controls[code]['agents']:
+                problems.append(f'{code}: revisor no asignado {r.get("agent")}')
             if not isinstance(c.get('evidence'),str) or not c['evidence'].strip():
                 problems.append(f'{code}: falta evidencia o motivo de NO_APLICA')
             if c.get('slides') and set(c['slides'])!=set(controls[code]['source_slides']):
@@ -103,8 +105,24 @@ def main():
     ap.add_argument('--project-dir',type=Path,help='Course project folder with qa/ and source files')
     ap.add_argument('--resource-id',help='Resource identifier R1, R2...')
     ap.add_argument('--docx',type=Path,help='Current output DOCX; verified by SHA-256')
+    ap.add_argument('--enforce-three-passes',action='store_true',help='Require learning/editorial/fidelity grouped reviews and fresh course consistency')
+    ap.add_argument('--compact',action='store_true',help='Print only status and failing findings; full report remains in --out')
     args=ap.parse_args()
-    reports=[json.loads(Path(f).read_text(encoding='utf-8')) for f in args.reports]
+    raw_reports=[json.loads(Path(f).read_text(encoding='utf-8')) for f in args.reports]
+    grouped={'status':'NOT_REQUESTED','errors':[]}
+    if args.enforce_three_passes:
+        if not args.project_dir or not args.docx:
+            grouped={'status':'ROJO','errors':['GROUPED_CONTEXT_MISSING']}
+            reports=[]
+        else:
+            shared_tmp=args.qa_source_root or find_shared(Path(__file__).resolve())
+            sys.path.insert(0,str(shared_tmp/'scripts') if shared_tmp else str(Path(__file__).parent))
+            from verify_review_passes import verify as verify_passes
+            rid_tmp=args.resource_id or raw_reports[0].get('resource_id')
+            grouped=verify_passes(args.project_dir.expanduser().resolve(),rid_tmp,raw_reports,args.docx)
+            reports=grouped['reviewers']
+    else:
+        reports=[x for g in raw_reports for x in (g.get('reviews',[]) if isinstance(g.get('reviews'),list) else [g])]
     issues=[]
     for r in reports:
         for i in r.get('issues',[]):
@@ -112,13 +130,13 @@ def main():
     critical=[x for x in issues if x.get('severity')=='critical']
     red=[r for r in reports if r.get('status')=='ROJO' or r.get('decision')=='REGRESA_A_PRODUCCION']
     shared=args.qa_source_root or find_shared(Path(__file__).resolve())
-    qa=analyze_content_qa(reports,shared)
+    qa=analyze_content_qa(reports,shared,require_agent_ownership=args.enforce_three_passes)
     rid=args.resource_id or (reports[0].get('resource_id') or reports[0].get('resource'))
     fidelity=analyze_fidelity(reports,args.project_dir,rid,args.docx,shared)
     if critical or red:decision='REGRESA_A_PRODUCCION';status='ROJO'
     elif issues:decision='APROBADO_CON_AJUSTES';status='AMARILLO'
     else:decision='APROBADO';status='VERDE'
-    if qa['status']!='VERDE' or fidelity['status']!='VERDE':
+    if qa['status']!='VERDE' or fidelity['status']!='VERDE' or grouped['status']=='ROJO':
         if args.partial_review:
             # Explicit partial reviews cannot receive an unqualified integral-green decision.
             if status=='VERDE':status='AMARILLO';decision='APROBADO_CON_AJUSTES'
@@ -126,10 +144,12 @@ def main():
             status='ROJO';decision='REGRESA_A_PRODUCCION'
     result={'status':status,'decision':decision,'reports':len(reports),'issues_total':len(issues),
             'critical_total':len(critical),'auto_fixable_total':sum(1 for x in issues if x.get('auto_fixable') is True),
-            'content_qa':qa,'source_fidelity':fidelity,'partial_review':args.partial_review,'issues':issues}
+            'content_qa':qa,'source_fidelity':fidelity,'grouped_review':{k:v for k,v in grouped.items() if k!='reviewers'},'partial_review':args.partial_review,'issues':issues}
     data=json.dumps(result,ensure_ascii=False,indent=2)
     if args.out:args.out.write_text(data+'\n',encoding='utf-8')
-    print(data)
+    if args.compact:
+        print(json.dumps({'resource_id':rid,'status':status,'decision':decision,'content_qa':qa['status'],'fidelity':fidelity['status'],'review_passes':grouped['status'],'issues':len(issues),'errors':grouped.get('errors',[])+qa.get('problems',[])+fidelity.get('errors',[])},ensure_ascii=False))
+    else:print(data)
     if status=='ROJO':
         sys.exit(1)
 

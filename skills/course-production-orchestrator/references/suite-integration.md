@@ -1,22 +1,3 @@
-# Integración de la suite
+# Integration with existing Codex and Claude Code projects
 
-Skills esperadas:
-
-1. `resource-producer`
-2. `source-fidelity-reviewer`
-3. `pedagogical-reviewer`
-4. `dynamism-reviewer`
-5. `visual-stock-reviewer`
-6. `template-format-reviewer`
-7. `language-humanizer`
-8. `course-consistency-reviewer`
-9. `accessibility-reviewer`
-10. `final-qa`
-
-## Flujo
-
-Para cada recurso: Productor → Fidelidad → Pedagógico → Dinamismo → Visual/Stock → Plantilla/Formato → Lenguaje.
-
-Al terminar todos los recursos: Consistencia → Accesibilidad → QA Final.
-
-Fidelidad es gate crítico y no puede ser anulado por revisiones posteriores. QA puede ordenar hasta dos ciclos de corrección automática únicamente para hallazgos objetivos.
+Install with `python install_suite.py --platform codex|claude --project-dir PATH`; the installer backups and updates only its own managed files. The current reviewer order is defined **only** in `.course-agent-suite/shared/references/lean-workflow.md`, not an old serial chain. One shared Learning review, one shared Editorial review, one course-wide Consistency review, then independent final Fidelity per Word. Run scripted final QA and keep evidence outside editorial Word.

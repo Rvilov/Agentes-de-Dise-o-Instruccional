@@ -8,7 +8,7 @@ Esta suite utiliza la **PPT original completa (97 diapositivas)** como norma int
 - **Índice fiel de 97 diapositivas:** `content-qa-full-slide-index.md` (bloques editables; preserva número de diapositiva).
 - **Inventario automatizable:** `content-qa-slide-inventory.json` (texto y presencia de imágenes).
 - **Registro verificable:** `content-qa-control-register.json` (27 controles con numeración exacta de la diapositiva y agentes responsables).
-- **Resumen operativo:** `content-qa-guidelines.md`. **No usar el resumen como sustituto de la fuente completa.**
+- **Resumen operativo:** `content-qa-guidelines.md`. **La fuente completa se conserva, pero no se carga en el contexto en cada tarea.**
 - **Suplemento general:** `general-spanish-supplement.md` (identificado como reglas generales del español que no proceden de la PPT).
 
 Las ilustraciones, imágenes, memes, resultados de encuestas, juegos y actividades se conservan en el PPTX. Si es necesario interpretar una imagen o una tabla que el índice no exprese suficientemente, **abrir la PPTX**, no inferir a partir de la transcripción.
@@ -16,7 +16,7 @@ Las ilustraciones, imágenes, memes, resultados de encuestas, juegos y actividad
 ## Uso obligatorio en cada recurso
 
 1. Antes de producir/revisar: localizar `content-qa-control-register.json` en la carpeta compartida e identificar controles asignados al agente.
-2. Consultar `content-qa-full-slide-index.md` para las diapositivas originales correspondientes; abrir la fuente PPTX si hay ambigüedad o visual relevante.
+2. Consultar solamente el registro de 27 controles. No cargar el indice completo en el contexto. Si surge una ambiguedad, abrir el tramo de la diapositiva requerida y, si hace falta, la fuente PPTX.
 3. Aplicar controles normativos pertinentes según tipo de recurso. No exigir reglas ajenas al tipo de recurso: por ejemplo, no auditar opciones múltiples si no hay evaluación.
 4. En el reporte de QA registrar `{id_control, diapositiva, resultado, evidencia_del_recurso, acción}` para cada control aplicable. Resultados: `CUMPLE`, `INCUMPLE`, `NO_APLICA`, `PENDIENTE_CRITERIO`.
 5. Si el PPTX original o el índice completo no está disponible, registrar `CONTENT_QA_SOURCE_INCOMPLETE` y **no declarar verificación 100% contra la PPT**. Puede continuarse con un diagnóstico parcial, sin fingir un verde integral.
